@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <title>Yummy</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="loading justify-content-center align-items-center position-fixed top-0 bottom-0 start-0 end-0">
+    <i class="fa-solid fa-spinner fa-spin fa-5x"></i>
+</div>
+<div class="w-25 position-fixed z-3 d-flex vh-100 sideBar">
+    <div class="w-md-75 w-sm-100 container-fluid py-3 d-flex flex-column justify-content-between m-0 inner" >
+        <div>
+            <ul class="nav flex-column overflow-hidden">
+                <li class="nav-item" onclick="showInput(),closeSideBare()">
+                    <a class="nav-link"  href="#">Search</a>
+                </li>
+                <li class="nav-item" onclick="getCategory(),closeSideBare()">
+                    <a class="nav-link" href="#">Categories</a>
+                </li>
+                <li class="nav-item" onclick="getArea(),closeSideBare()">
+                    <a class="nav-link" href="#">Area</a>
+                </li>
+                <li class="nav-item" onclick="getIngredients(),closeSideBare()">
+                    <a class="nav-link" href="#">Ingredients</a>
+                </li>
+                <li class="nav-item"  onclick="showContactUs(),closeSideBare()">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-foolef ps-3 mt-3">
+            <div class="icon">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <p>Copyright Â© 2019 All Rights
+                Reserved.</p>
+        </div>
+    </div>
+    <div class="bg-body side-bar  text-black d-flex flex-column justify-content-between text-center py-2">
+        <img src="images/logo.png" class="w-75 mx-auto mt-2 " alt="">
+        <i class="fa-solid open-close-icon fa-align-justify fa-2x openSide"></i>
+        <div>
+            <i class="fa-solid fa-globe d-block mb-1"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="inner-loading justify-content-center align-items-center position-fixed z-2 top-0 bottom-0 start-0 end-0">
+        <i class="fa-solid fa-spinner fa-spin fa-5x"></i>
+    </div>
+</div>
+<div class="container" id="search">
+    
+</div>
+<div class="container p-4">
+    <div id="rowData" class="row g-2">
+    </div>
+</div>
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
