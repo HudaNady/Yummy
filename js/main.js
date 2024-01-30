@@ -47,10 +47,10 @@ function showInput(){
     $(".inner-loading").show()
     searchInputs.innerHTML = `
     <div class="row py-4  container">
-        <div class="col-lg-3 col-md-6 col-sm-6  ">
+        <div class="col-lg-6 col-md-6 col-sm-6  ">
             <input onkeyup="searchByName(this.value)" class="form-control bg-transparent text-white" type="text" placeholder="Search By Name">
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 mt-2">
+        <div class="col-lg-6 col-md-6 col-sm-6">
             <input onkeyup="searchByFirstName(this.value)" maxlength="1" class="form-control bg-transparent text-white" type="text" placeholder="Search By First Letter">
         </div>
     </div>`
@@ -282,7 +282,6 @@ $("#userEmail").on('keyup', function() {
     emailInput=true
 });
 $("#userPhone").on('keyup', function() {
-    userPhone=$("#userPhone").val()
     phoneInput=true
 });
 $("#userAge").on('keyup', function() {
@@ -296,6 +295,7 @@ $("#rePassword").on('keyup', function() {
 });
 userAge=document.getElementById("userAge")
 userPassword=document.getElementById("userPassword")
+userPhone=document.getElementById("userPhone")
 rePassword=document.getElementById("rePassword")
 }
 
@@ -314,7 +314,7 @@ function validEmail(){
 }
 function validPhone(){
     var ragPhone=/^\(?([0-9]{3})\)?[- ]?([0-9]{3})[- ]?([0-9]{4})$/;
-    if(ragPhone.test(userPhone)==true){
+    if(ragPhone.test(userPhone.value)==true){
         return true
     }
 }
